@@ -49,6 +49,35 @@
 </head>
 
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAyIhsMNuSCSVRp3KM5eDEHpRPNJNyEB2Q",
+            authDomain: "amfibee-web.firebaseapp.com",
+            projectId: "amfibee-web",
+            storageBucket: "amfibee-web.appspot.com",
+            messagingSenderId: "261038540046",
+            appId: "1:261038540046:web:1995d453d89beff0ec035f",
+            measurementId: "G-T0NLFS2GCJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        function onBuyClicked(count) {
+            var value = "home_buy_" + count + "_clicked";
+            firebase.analytics().logEvent(value);
+        }
+    </script>
     <header class="header">
         <div class="branding">
             <div class="container-fluid position-relative py-3">
@@ -82,7 +111,7 @@
                         <!--//subheading-->
 
                         <div class="cta-holder">
-                            <a class="btn btn-primary mr-lg-2" href="payment.html">Beli deh!</a>
+                            <a class="btn btn-primary mr-lg-2" onclick="onBuyClicked(1);" href="payment.html">Beli deh!</a>
                             <a class="btn btn-secondary scrollto" href="#benefits-section">Pengen Baca dulu!</a>
                         </div>
                         <!--//cta-holder-->
@@ -161,7 +190,7 @@
                         </div>
                     </div>
                     <!--//book-cover-holder-->
-                    <div class="text-center"><a class="theme-link scrollto" href="#reviews-section">Lihat testimoni</a></div>
+                    <div class="text-center"><a class="theme-link scrollto" href="#audience-section">Lihat testimoni</a></div>
                 </div>
                 <!--col-->
             </div>
@@ -310,7 +339,7 @@
                                 <li><i class="fas fa-check-circle mr-2"></i>Memilih produk olahan untuk memasak. </li>
                                 <li><i class="fas fa-check-circle mr-2"></i>Manfaat madu untuk tubuh.</li>
                             </ul>
-                            <div class="text-center"><a class="btn btn-primary" href="payment.html">Beli Madu dan Dapatkan Ebook ini!</a></div>
+                            <div class="text-center"><a class="btn btn-primary" onclick="onBuyClicked(2);" href="payment.html">Beli Madu dan Dapatkan Ebook ini!</a></div>
                         </div>
                         <!--//key-points-->
 
@@ -430,7 +459,7 @@
                 </div>
 
 
-                <div class="text-center mb-3"><a class="btn btn-primary" href="payment.html">Beli Sekarang!</a></div>
+                <div class="text-center mb-3"><a class="btn btn-primary" onclick="onBuyClicked(3);" href="payment.html">Beli Sekarang!</a></div>
 
             </div>
 
@@ -481,7 +510,7 @@
                     Sarang Madu <span style="color:#FA7534">Saheela</span> <b>250 gram</b>
                 </div>
 
-                <div class="text-center mb-3"><a class="btn btn-primary" href="payment-250.html">Beli yang ini!</a></div>
+                <div class="text-center mb-3"><a class="btn btn-primary" onclick="onBuyClicked(4)" href="payment-250.html">Beli yang ini!</a></div>
 
             </div>
 

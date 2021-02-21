@@ -71,6 +71,15 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+
+
+        function onBuyClicked() {
+            firebase.analytics().logEvent('payment_500_buy_clicked');
+        }
+
+        function onFieldNameClicked() {
+            firebase.analytics().logEvent('payment_500_field_name_clicked');
+        }
     </script>
     <header class="header">
         <div class="branding">
@@ -107,7 +116,7 @@
                 <form id="myForm">
                     <div class="form-group">
                         <label for="inputAddress">Nama</label>
-                        <input type="text" class="form-control" id="name" placeholder="" required>
+                        <input type="text" class="form-control" onclick="onFieldNameClicked()" id="name" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Nomor Hp (Whatsapp)</label>
@@ -214,7 +223,7 @@
 
         var links = "https://api.whatsapp.com/send?phone=6285891599079&text=Hai%20kak%2C%20saya%20mau%20order%20nihh%2C%20tolong%20infokan%20ongkos%20kirim%20dan%20nomor%20rekening%20yahh%20%F0%9F%98%8A%F0%9F%98%8A%0ABerikut%20detail%20alamat%20saya%20kak%20%3A%0A%0ANama%20%3A%20%0A" + name + "%0ANomor%20Hp%20%3A%20%0A" + phone + "%0AAlamat%20%3A%20%0A" + address + "%0AProduk%20%3A%20%0A" + product + "%0AJumlah%20%3A%20" + quantity + "%0AHarga%20%3A%20" + price + "%0AKurir%20:%20" + kurir + "%0A%0A%0ATerimakasih%20kak%2C%20tolong%20infokan%20segera%20yahh%20biar%20langsung%20saya%20transfer%20%F0%9F%98%8A%F0%9F%98%8A"
         openInNewTab(links);
-
+        onBuyClicked();
     });
 
     function openInNewTab(url) {
