@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AmfiBee - Pusatnya Madu Alami</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Book/eBook Landing Page Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="assets/images/site-logo.svg">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+    <style>
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%239D9D9D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+        
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%239D9D9D' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="branding">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper">
+                    <div class="site-logo">
+                        <a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/site-logo.svg" alt="logo"><span class="logo-text">AmfiBee</span></a>
+                    </div>
+                </div>
+                <!--//docs-logo-wrapper-->
+
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+
+    <section id="price2">
+        <div class="container">
+            <div class="single-col-max mx-auto mb-5">
+                <div class="section-intro single-col-max mx-auto text-center mb-3">
+                    Lengkapi data diri anda dan alamat lengkap pengiriman &#128522;
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="product-form-section">
+        <div class="container">
+            <div class="d-flex justify-content-center mb-5">
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="inputAddress">Nama</label>
+                        <input type="text" class="form-control" id="name" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Nomor Hp (Whatsapp)</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Kecamatan / Kelurahan</label>
+                            <input type="text" class="form-control" id="district" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Kota / Kabupaten</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCity">Provinsi</label>
+                        <input type="text" class="form-control" id="province" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Alamat Lengkap</label>
+                        <textarea class="form-control" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="inputAddress">Produk</label>
+                        <input disabled type="text" class="form-control" id="product" value="Sarang Madu Saheela 500 Gram + FREE Ebook Resep Sehat Dikala Pandemi" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputState">Jumlah</label>
+                        <select id="quantity" class="form-control">
+                          <option value="1" selected>1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9" >9</option>
+                          <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputState">Kurir (Pengiriman Dari Tangerang)</label>
+                        <select id="kurir" class="form-control">
+                          <option value="JNE REGULER" selected>JNE REGULER</option>
+                          <option value="JNE YES">JNE YES</option>
+                          <option value="J&T">J&T</option>
+                          <option value="TIKI REGULER">TIKI REGULER</option>
+                          <option value="TIKI OVER NIGHT">TIKI OVER NIGHT</option>
+                          <option value="GO-SEND / GRAB">GO-SEND / GRAB</option>
+                          <option value="LION PARCEL">LION PARCEL</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center mb-3">
+                        <div class="col-12">
+                            <button id="btnSubmit" class="btn btn-primary" type="submit">Order Sekarang!</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.4.1.min.js "></script>
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+    <script src="assets/plugins/jquery.scrollTo.min.js "></script>
+    <script src="assets/plugins/back-to-top.js "></script>
+
+    <script src="assets/js/main.js "></script>
+
+</body>
+
+<script>
+    document.querySelector("#myForm").addEventListener("submit", function(e) {
+        const basePrice = 190000;
+
+        var name = $('#name').val();
+        var phone = $('#phone').val();
+        var email = $('#email').val();
+        var city = $('#city').val();
+        var district = $('#district').val();
+        var province = $('#province').val();
+        var address = $('#address').val() + ", " + district + ", " + city + " " + province;
+        var quantity = Number($('#quantity :selected').text());
+        var product = $('#product').val();
+        var price = basePrice * quantity;
+        var kurir = $('#kurir :selected').text();
+        price = convertToRupiah(price);
+
+        var links = "https://api.whatsapp.com/send?phone=6285891599079&text=Hai%20kak%2C%20saya%20mau%20order%20nihh%2C%20tolong%20infokan%20ongkos%20kirim%20dan%20nomor%20rekening%20yahh%20%F0%9F%98%8A%F0%9F%98%8A%0ABerikut%20detail%20alamat%20saya%20kak%20%3A%0A%0ANama%20%3A%20%0A" + name + "%0ANomor%20Hp%20%3A%20%0A" + phone + "%0AAlamat%20%3A%20%0A" + address + "%0AProduk%20%3A%20%0A" + product + "%0AJumlah%20%3A%20" + quantity + "%0AHarga%20%3A%20" + price + "%0AKurir%20:%20" + kurir + "%0A%0A%0ATerimakasih%20kak%2C%20tolong%20infokan%20segera%20yahh%20biar%20langsung%20saya%20transfer%20%F0%9F%98%8A%F0%9F%98%8A"
+        openInNewTab(links);
+
+    });
+
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
+
+    function convertToRupiah(angka) {
+        var rupiah = '';
+        var angkarev = angka.toString().split('').reverse().join('');
+        for (var i = 0; i < angkarev.length; i++)
+            if (i % 3 == 0) rupiah += angkarev.substr(i, 3) + '.';
+        return 'Rp. ' + rupiah.split('', rupiah.length - 1).reverse().join('');
+    }
+</script>
+
+
+
+</html>
