@@ -213,7 +213,7 @@
 </body>
 
 <script>
-    loadData();
+    // loadData();
 
     function loadData() {
         var xhttp = new XMLHttpRequest();
@@ -226,7 +226,7 @@
         xhttp.open("GET", "https://api.rajaongkir.com/starter/province", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.setRequestHeader("key", keyRajaOngkir);
-        xhttp.send("fname=Henry&lname=Ford");
+        xhttp.send();
     }
 
     // const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
