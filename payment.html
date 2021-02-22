@@ -216,11 +216,11 @@
     const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "https://api.rajaongkir.com/starter/province",
         headers: ({
             key: keyRajaOngkir,
-            "Content-Type": "application/x-www-form-urlencoded"
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
         }),
         cache: false,
         success: function(data) {
