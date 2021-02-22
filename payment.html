@@ -201,7 +201,7 @@
 
 
     <!-- Javascript -->
-    <script src="assets/plugins/jquery-3.4.1.min.js "></script>
+    <script src="assets/plugins/jquery-latest.js"></script>
     <script src="assets/plugins/popper.min.js "></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
     <script src="assets/plugins/jquery.scrollTo.min.js "></script>
@@ -216,10 +216,11 @@
     const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
 
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "https://api.rajaongkir.com/starter/province",
         headers: ({
-            key: keyRajaOngkir
+            key: keyRajaOngkir,
+            "Content-Type": "application/x-www-form-urlencoded"
         }),
         cache: false,
         success: function(data) {
