@@ -214,22 +214,22 @@
 
 <script>
     const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-    headers.append('key', keyRajaOngkir);
-    headers.append('Origin', 'http://localhost:5500');
 
-    var settings = {
-        "url": "https://api.rajaongkir.com/starter/province",
-        "method": "GET",
-        "timeout": 0,
-        "headers": headers
-    };
-
-    $.ajax(settings).done(function(response) {
-        console.log(response);
+    $.ajax({
+        type: "GET",
+        url: "https://api.rajaongkir.com/starter/province",
+        headers: ({
+            key: keyRajaOngkir
+        }),
+        cache: false,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(error) {
+            console.error(error);
+        }
     });
+
 
 
     document.querySelector("#myForm").addEventListener("submit", function(e) {
