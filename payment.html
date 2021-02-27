@@ -216,19 +216,22 @@
     loadData();
 
     function loadData() {
-        const url = "https://api.rajaongkir.com/starter/province";
-        const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
+        var xmlhttp = new XMLHttpRequest();
 
-        const options = {
-            headers: {
-                "Content-Type": "application/json; charset=utf-8",
-                "key": keyRajaOngkir
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
+                if (xmlhttp.status == 200) {
+                    console.log(xmlhttp.status);
+                } else if (xmlhttp.status == 400) {
+                    alert('There was an error 400');
+                } else {
+                    alert('something else other than 200 was returned');
+                }
             }
         };
 
-        fetch(url, options)
-            .then(res => res.json())
-            .then(data => console.log(data));
+        xmlhttp.open("GET", "https://api.rajaongkir.com/starter/province", true);
+        xmlhttp.send();
     }
 
     // const keyRajaOngkir = "1b347efdbd59a74184fc13da7f9054f7";
